@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Register your interest in a Future School activity.">
+  <title>Activities | Future School</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header"><nav class="navbar container" aria-label="Main navigation"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">F</span> Future School</a><button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span><span></span></button><ul class="nav-links" id="primary-navigation"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="blog.html">News</a></li><li><a class="active" aria-current="page" href="booking.html">Activities</a></li><li><a href="contact.html">Contact</a></li><li><a class="nav-login" href="login.html">Login</a></li></ul></nav></header>
+  <main>
+    <section class="page-hero"><div class="container"><p class="eyebrow">Try something new</p><h1>Find your next activity.</h1><p>Choose an activity and send us your registration. We’ll help you take the next step.</p></div></section>
+    <section class="section container form-section"><div class="form-intro"><p class="eyebrow">Make it yours</p><h2>Activities registration</h2><p>Tell us a little about yourself and what you’d like to explore.</p><div class="form-aside"><span aria-hidden="true">✦</span><p>Our activities are a welcoming space to learn by doing, meet classmates, and follow your interests.</p></div></div>
+      <form class="form-card" onsubmit="event.preventDefault()">
+        <div class="form-grid">
+          <div class="form-field"><label for="student-name">Full name <span aria-hidden="true">*</span></label><input id="student-name" name="name" type="text" autocomplete="name" placeholder="Your full name" required></div>
+          <div class="form-field"><label for="student-email">Email address <span aria-hidden="true">*</span></label><input id="student-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+          <div class="form-field"><label for="student-age">Age <span aria-hidden="true">*</span></label><input id="student-age" name="age" type="number" min="5" max="18" placeholder="Your age" required></div>
+          <div class="form-field"><label for="activity">Choose an activity <span aria-hidden="true">*</span></label><select id="activity" name="activity" required><option value="" selected disabled>Select an activity</option><option>Technology Club</option><option>Science Lab</option><option>Arts &amp; Design</option></select></div>
+          <div class="form-field form-span"><label for="registration-notes">Anything else you’d like us to know?</label><textarea id="registration-notes" name="notes" rows="4" placeholder="Tell us about your interests or questions"></textarea></div>
+          <label class="checkbox-field form-span"><input type="checkbox" name="updates" value="yes"><span>I’d like to hear about upcoming activities.</span></label>
+          <div class="form-submit form-span"><button class="button button-primary" type="submit">Send Registration <span aria-hidden="true">→</span></button><p class="form-note">This is a demo form. Your information will not be sent or stored.</p></div>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-content"><a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">F</span> Future School</a><p>Curious minds. Bright futures.</p><p class="copyright">© 2025 Future School. Learning for what’s next.</p></div></footer>
+  <script>const menuButton=document.querySelector('.menu-toggle');const navigation=document.querySelector('.nav-links');menuButton.addEventListener('click',()=>{const isOpen=navigation.classList.toggle('show');menuButton.setAttribute('aria-expanded',String(isOpen));menuButton.setAttribute('aria-label',isOpen?'Close navigation menu':'Open navigation menu');});</script>
+</body>
+</html>
